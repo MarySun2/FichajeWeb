@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Img/engranajesCiencia.ico" type="image/x-icon">
+    <title>Generar Formulario PDF</title>
+    <style>
+        .imgbtn {
+    /* Establece el tamaño de la imagen */
+    width: 30px;
+    height: 30px;
+    /* Ajusta el tamaño de la imagen para que cubra todo el botón */
+    background-size: cover;
+    /* Establece otros estilos según sea necesario */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    }
+
+    .descargarPdf {
+    background-image: url('./Img/botones/filetype-pdf.svg');
+    }
+
+    .imgprint {
+    background-image: url('./Img/botones/printer.svg');
+    }
+
+    </style>
+</head>
+
+<body>
+    <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+  </head>
+  <body>
+    <div class="p-4">
+  <div class="flex items-center mb-4">
+    <div class="w-40 h-40 border border-zinc-600">   
+    </div>
+    <div class="ml-4">
+      <h1 class="text-lg font-bold"></h1>
+      <p>Consejería de Educación, Cultura y Universidades</p>
+    </div>
+  </div>
+  <h2 class="text-center font-bold mb-4">MÓDULO DE FORMACIÓN EN CENTROS DE TRABAJO<br>HOJA SEMANAL DEL ALUMNO<br>ANEXO IV</h2>
+  <div class="border border-zinc-300 p-4 mb-4">
+    <div class="grid grid-cols-2 gap-4 mb-4">
+      <div>
+            <div class="flex">
+                <p class="font-bold">CENTRO DOCENTE:</p> 
+                <p class="mx-3" id="centrodocente"></p>
+            </div>
+        
+            <div class="flex">
+                <p class="font-bold">TUTOR/A DEL CENTRO DOCENTE:</p>
+                <p class="mx-3" id="tutorcentrodocente"></p>
+            </div>
+            <div class="flex">
+                <p class="font-bold">ALUMNO/A:</p>
+                <p class="mx-3" id="alumnos"></p>
+            </div>
+            
+      </div>
+      <div>
+        <div class="flex">
+            <p class="font-bold">CENTRO DE TRABAJO:</p>
+            <p class="mx-3" id="centrodetrabajo"></p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">TUTOR/A DEL CENTRO DE TRABAJO:</p>
+          <p class="mx-3" id="tutorcentrotrabajo"></p>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <div class="flex">
+          <p class="font-bold">FAMILIA PROFESIONAL:</p>
+          <p class="mx-3" id="familiaprofesional"></p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">CICLO FORMATIVO:</p>
+          <p class="mx-3" id="cicloformativo"></p>
+        </div>
+        
+      </div>
+      <div>
+        <div class="flex">
+          <p class="font-bold">PERIODO:</p>
+          <p class="mx-3" id="periodo"></p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">SEMANA</p>
+          <p class="mx-3" id="semana"></p>
+        </div>
+        <div class="flex">
+          <p class="font-bold">HORAS:</p>
+          <p class="mx-3" id="horas"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="w-full border border-zinc-500 mb-4">
+    <thead>
+      <tr class="border-b border-zinc-500">
+        <th class="p-2 border-r border-zinc-500">FECHA</th>
+        <th class="p-2 border-r border-zinc-500">ACTIVIDADES REALIZADAS</th>
+        <th class="p-2 border-r border-zinc-500">TIEMPO</th>
+        <th class="p-2">OBSERVACIONES</th>
+      </tr>
+    </thead>
+    <tbody id="tabla">
+      
+    </tbody>
+  </table>
+  <div class="flex justify-between mb-4">
+    <div class="text-center">
+        <br><br>
+      <p class="font-bold">ALUMNO/A</p>
+      <div class="flex flex-col items-start">
+        <p id="firmaAlumno"></p>
+        <p>Fdo.: ...............................................................</p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <br><br>
+      <p class="font-bold">EL TUTOR DEL CENTRO DE TRABAJO</p>
+      <div class="flex flex flex-col items-start">
+        <p id="firmaTutor"></p>
+        <p>Fdo.: ...............................................................</p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <br><br>
+      <p class="font-bold">EL TUTOR DEL CENTRO DOCENTE</p>
+      <div class="flex flex flex-col items-start">
+        <p id="firmaprofesor"></p>
+        <p>Fdo.: ...............................................................</p>
+      </div>
+    </div>
+  </div>
+</div>
+<button onclick="window.print()" class="imgbtn imgprint"></button>
+<button id="btnCrearPdf" class="imgbtn descargarPdf"></button>
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+<script src="./Js/pdf.js"></script>
+<script src="./Js/formulariopdf.js" type="module"></script>
+<Script src="./Js/html2pdf.bundle.min.js"></Script>
+ 
+</body>
+</html>

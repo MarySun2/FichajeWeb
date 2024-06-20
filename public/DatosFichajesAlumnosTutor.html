@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./Css/estilos.css">
+    <link rel="shortcut icon" href="./Img/engranajesCiencia.ico" type="image/x-icon">
+    <title>Datos de los Alumnos</title>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm y navbar-dark py-1">
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="MenuTutor.html">
+                <img src="./Img/house.svg" alt="Avatar Logo" style="width:35px;" class="rounded-pill">
+            </a>
+        </div>
+
+        <h1 class="tipo mx-4">TUTOR</h1>
+
+        <div class="usuario">
+            <img src="./Img/person-bounding-box.svg" alt="Usuario" width="30" height="30">
+            <span id="login"></span>
+            <button type="button" class="btn btn-primary btn-lg" id="loginButton" style="display: none;">Login</button>
+            <button type="button" class="btn btn-secondary btn-lg" id="logoutButton">Logout</button>
+        </div>
+
+        <!-- <div class="col-md-12 text-center text-md-end mb-3">
+            <a href="FichajesAlumno.html" class="text-decoration-none btn btn-outline-secondary">Volver a Fichajes
+                Alumnos</a>
+        </div> -->
+
+    </nav>
+
+    <main>
+        <!--Menu-->
+        <div class="offcanvas offcanvas-start x text-light" id="demo">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Menu</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+ 
+                <!--Profesor-->
+                <h3 class="offcanvas-title">Tutor</h3>
+                <ul class="list-unstyled">
+                    <li><a href="./ListaAlumnosTutor.html" class="text-light">Lista de Alumnos</a></li>               
+                </ul>
+                <!--Otro Menu?-->
+                <h3 class="offcanvas-title">Otros</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light">Perfil</a></li>
+                    <li><a href="#" class="text-light">Configuración</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-light imgbtn imgmenu m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"></button>
+        </div>
+
+        <div class="d-flex justify-content-left m-4">
+            <a href="ListaAlumnosTutor.html" class="btn btn-outline-secondary mb-3 imgbtn flechaizq"></a>
+        </div>
+
+        <!-- Contenedor para mostrar los datos del alumno -->
+        <div id="datos-alumno-container" class="container mt-5">
+            <h2>Información del Alumno</h2>
+            <table class="table">
+                <tbody id="datos-alumno-body">
+                    <!-- Aquí se mostrarán los datos del alumno -->
+                </tbody>
+            </table>
+        </div>
+
+        <!--Fichaje-->
+        <div class="container mt-5">
+            <h1 class="mb-4">Fichajes</h1>
+            <!-- Menu Acordion -->
+            <div class="accordion" id="tabla-semanas">
+                
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <img src="./Img/engranajesCiencia.png" alt="Logo" class="mb-4">
+                    <h1 class="mb-3">Engranajes Ciencia</h1>
+                    <h2 class="h4 mb-3">Sistema de Fichaje de Alumnos</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center text-md-start mb-6 mb-md-0">
+                    <p class="text-muted">Derechos reservados &copy; 2024 Medac</p>
+                </div>
+                <div class="col-md-12 text-center text-md-end">
+                    <a href="https://www.facebook.com/profile.php?id=100063564521360" target="_blank"
+                        class="text-decoration-none me-3">
+                        <img src="./Img/Fotter/Facebook.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/engranajesciencia/" target="_blank"
+                        class="text-decoration-none me-3">
+                        <img src="./Img/Fotter/Instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCfXEtqrGocIBoJLYko-ZrGg" target="_blank"
+                        class="text-decoration-none me-3">
+                        <img src="./Img/Fotter/youtube.png" alt="YouTube" class="social-icon">
+                    </a>
+                    <a href="https://www.whatsapp.com/" target="_blank" class="text-decoration-none">
+                        <img src="./Img/Fotter/Wapsap.png" alt="WhatsApp" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    <script src="./Js/loguin.js" type="module"></script>
+    <script src="./Js/DatosFichajesAlumnosTutor.js" type="module" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

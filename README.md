@@ -3,15 +3,15 @@
 ## Practicas de Medac
 
 > [!NOTE]
-> - [x] #739
-> - [ ] https://github.com/octo-org/octo-repo/issues/740
+> - [x] Creado Entorno firebase
+> - [x] Funcionando
 > - [ ] Add delight to the experience when all tasks are complete :tada:
 
 > [!TIP]
 > Helpful advice for doing things better or more easily.
 
 > [!IMPORTANT]
-> La web es https://github.com/octo-org/octo-repo/issues/740
+> La web es https://proyectmar-cf51f.web.app/
 
 > [!WARNING]
 > Urgent info that needs immediate user attention to avoid problems.

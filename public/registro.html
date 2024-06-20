@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./Img/engranajesCiencia.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./Css/estilos.css">
+    
+     <!--Firebase-->
+     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+    
+    
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm y navbar-dark py-1">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+            <img src="./Img/house.svg" alt="Avatar Logo" style="width:35px;" class="rounded-pill"> 
+          </a>
+        </div>
+      </nav>
+
+      <main>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="col-md-12 text-left">
+                        <a href="loguin.html" class="btn btn-outline-secondary mb-3 imgbtn flechaizq" data-bs-toggle="tooltip" title="Volver a Fichar Alumno"></a>
+                    </div>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h2 class="text-center">Registro</h2>
+                            <form id="registroForm">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="apellidos" class="form-label">Apellidos</label>
+                                    <input type="text" class="form-control" id="apellido" placeholder="Introduce tus apellidos" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="correoElectronico" placeholder="Introduce tu email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Introduce tu contraseña con más de 6 dígitos" minlength="6" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+                                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirma tu contraseña" pattern=".{6,}" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="centro-docente" class="form-label">Centro Docente</label>
+                                    <input type="text" class="form-control" id="centrodocente" placeholder="Introduce el centro educativo" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="rol" class="form-label">Rol</label>
+                                    <select id="rol" class="form-select">
+                                        <option selected>Alumno</option>
+                                        <option value="profesor">Profesor</option>
+                                        <option value="tutor">Tutor</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3 d-grid gap-2 d-md-flex justify-content-md-between">
+                                    <button type="button" class="btn btn-danger btn-lg" id="rellenarCampos">Rellena los campos</button>
+                                    <button type="button" class="btn btn-primary btn-lg" id="guardarRegistro">Enviar</button>
+                                    <button type="reset" class="btn btn-secondary btn-lg">Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </main>
+
+    <footer>
+        <footer class="bg-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="text-muted">Derechos reservados &copy; 2024 Medac</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="https://www.facebook.com/profile.php?id=100063564521360" target="_blank" class="text-decoration-none me-3">
+                            <img src="./Img/Fotter/Facebook.png" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/engranajesciencia/" target="_blank" class="text-decoration-none me-3">
+                            <img src="./Img/Fotter/Instagram.png" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCfXEtqrGocIBoJLYko-ZrGg" target="_blank" class="text-decoration-none me-3">
+                            <img src="./Img/Fotter/youtube.png" alt="YouTube" class="social-icon">
+                        </a>
+                        <a href="https://www.whatsapp.com/" target="_blank" class="text-decoration-none">
+                            <img src="./Img/Fotter/Wapsap.png" alt="WhatsApp" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./Js/registro.js" type="module"></script>
+</body>
+</html>

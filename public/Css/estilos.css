@@ -1,0 +1,304 @@
+/* Estilo para los enlaces dentro de la lista */
+.list-unstyled li a {
+    font-size: 18px;
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Usa el color de texto heredado */
+    transition: color 0.3s; /* Agrega una transición de color para el efecto hover */
+}
+
+/* Estilo para los enlaces cuando el mouse está sobre ellos */
+.list-unstyled li a:hover {
+    color: rgb(121, 185, 222); /* Cambia el color del texto cuando se acerca el mouse */
+    background-color: #28a745;
+}
+
+
+/* Estilos para los iconos de redes sociales */
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.5);
+}
+
+
+/*Efectos Fondo imagen*/
+.navbar-brand img {
+    width: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.2);
+}
+/* Parte que he modificado Alexander */
+.prueba {
+    color: white;
+}
+
+.usuario {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    top: 5px;
+    right: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.usuario img {
+    margin-right: 10px;
+}
+
+.usuario button {
+    margin-left: 10px; /* Agregamos separación entre los botones */
+}
+
+.menu-vertical {
+    position: fixed;
+    top: 0;
+    left: -220px; 
+    width: 220px; 
+    height: 100%;
+    background-color: #002f6c; 
+    padding: 20px;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.menu-vertical.show {
+    left: 0; 
+}
+
+.menu-vertical h3 {
+    color: #fff;
+    font-size: 24px; 
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff; 
+    padding-bottom: 10px; 
+}
+
+.menu-vertical ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-vertical li {
+    margin-bottom: 10px;
+}
+
+.menu-vertical a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu-vertical a:hover {
+    color: #ffd700; 
+}
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 70px; 
+}
+
+main {
+    margin-top: 70px; 
+}
+footer {
+    margin-top: 170px;
+}
+.btn-guardar {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.acciones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.acciones button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.acciones button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la tabla de datos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Aumentamos el padding para mejorar la legibilidad */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold; /* Hacemos que el texto de las cabeceras sea más destacado */
+}
+
+/* Estilos para las filas pares e impares */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para los acordeones */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+}
+
+.accordion-button.collapsed {
+    background-color: #28a745;
+}
+
+.accordion-body {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/* Hover effect para las filas de la tabla */
+th:hover, td:hover {
+    background-color: #d1d1d1;
+    transition: background-color 0.3s ease;
+}
+
+/* Parte del codigo modificado */
+
+/* Estilo para ocultar el botón de enviar cuando el formulario no está completo */
+#guardarRegistro {
+    display: none;
+}
+
+/* Estilo para mostrar el botón de enviar cuando el formulario está completo */
+#registroForm:valid #guardarRegistro {
+    display: block;
+}
+
+/* Estilo para ocultar el botón de advertencia cuando el formulario está completo */
+#registroForm:valid #rellenarCampos {
+    display: none;
+}
+
+ /* Parte del codigo modificado */
+ 
+
+ /*Estilo color barra*/
+ .x {
+    background-color: #012E4D ;
+ }
+
+ .y {
+    background-color: #BCCCD8;
+}
+
+
+.imgbtn {
+    /* Establece el tamaño de la imagen */
+    width: 30px;
+    height: 30px;
+    /* Ajusta el tamaño de la imagen para que cubra todo el botón */
+    background-size: cover;
+    /* Establece otros estilos según sea necesario */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+.eliminar {
+    /* Establece la imagen de fondo */
+    background-image: url('../Img/botones/trash.svg');
+  }
+
+.ver-fichajes {
+    background-image: url('../Img/botones/file-text-fill.svg');
+}
+
+.flechaizq {
+    background-image: url('../Img/botones/arrow-left-circle.svg');
+}
+
+.add {
+    background-image: url('../Img/botones/plus-circle.svg');
+}
+
+.btnf {
+    background-image: url('../Img/botones/folder.svg');
+}
+
+.descargarPdf {
+    background-image: url('../Img/botones/filetype-pdf.svg');
+}
+
+.firmarSemana {
+    background-image: url('../Img/botones/vector-pen.svg');
+}
+
+.imgmenu {
+    background-image: url('../Img/botones/border-width.svg');
+}
+
+.imgprint {
+    background-image: url('../Img/botones/printer.svg');
+}
+
+.edit {
+    background-image: url('../Img/botones/pencil-square.svg');
+}
+
+/*Card*/
+.btn-efec {
+    margin-left: 30px;
+}
+
+.ocultar-div {
+    display: none !important;
+}

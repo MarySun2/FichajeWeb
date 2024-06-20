@@ -1,0 +1,39 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(222, 217, 217, 0.8),rgba(0 0 0 / .8)),url(../Img/imagen2.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.container {
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    padding:20px;
+    gap:10px;
+    width: 1000px;
+}
+
+.box-info {
+    color:#fff;
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.box-info > h1 {
+    text-align: left;
+    letter-spacing: 5px;
+}
+
+a {
+    color: blue;
+}
